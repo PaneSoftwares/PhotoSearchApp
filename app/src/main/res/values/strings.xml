@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">PhotoSearchApp</string>
+    <string name="history">History</string>
+    <string name="search">Search</string>
+    <string name="unknown_error_occurred">Unknown error occurred</string>
+    <string name="search_image">Search images</string>
+    <string name="you_re_offline">You\'re offline</string>
+    <string name="error_occurred">Error occurred</string>
+    <string name="back">Back</string>
+    <string name="no_history_found">No history found</string>
 </resources>

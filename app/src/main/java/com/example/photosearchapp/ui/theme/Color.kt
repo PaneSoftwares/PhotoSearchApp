@@ -1,0 +1,31 @@
+package com.example.photosearchapp.ui.theme
+
+import androidx.compose.ui.graphics.Color
+
+val md_theme_light_primary = Color(0xFFF44336)
+val md_theme_light_onPrimary = Color(0xFFFFFFFF)
+val md_theme_light_primaryContainer = Color(0xFFFFDF9E)
+val md_theme_light_onPrimaryContainer = Color(0xFF261A00)
+val md_theme_light_secondary = Color(0xFF6B5D3F)
+val md_theme_light_onSecondary = Color(0xFFFFFFFF)
+val md_theme_light_secondaryContainer = Color(0xFFF5E0BB)
+val md_theme_light_onSecondaryContainer = Color(0xFF241A04)
+val md_theme_light_tertiary = Color(0xFF4A6547)
+val md_theme_light_onTertiary = Color(0xFFFFFFFF)
+val md_theme_light_tertiaryContainer = Color(0xFFCCEBC4)
+val md_theme_light_onTertiaryContainer = Color(0xFF072109)
+val md_theme_light_surface = Color(0xFFFFFBFF)
+
+val md_theme_dark_primary = Color(0xFFFABD00)
+val md_theme_dark_onPrimary = Color(0xFF3F2E00)
+val md_theme_dark_primaryContainer = Color(0xFF5B4300)
+val md_theme_dark_onPrimaryContainer = Color(0xFFFFDF9E)
+val md_theme_dark_secondary = Color(0xFFD8C4A0)
+val md_theme_dark_onSecondary = Color(0xFF3A2F15)
+val md_theme_dark_secondaryContainer = Color(0xFF52452A)
+val md_theme_dark_onSecondaryContainer = Color(0xFFF5E0BB)
+val md_theme_dark_tertiary = Color(0xFFB0CFAA)
+val md_theme_dark_onTertiary = Color(0xFF1D361C)
+val md_theme_dark_tertiaryContainer = Color(0xFF334D31)
+val md_theme_dark_onTertiaryContainer = Color(0xFFCCEBC4)
+val md_theme_dark_surface = Color(0xFF1E1B16)
