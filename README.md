@@ -23,9 +23,9 @@ Simply clone or download the project, import to Android Studio and build.
 
 - **Architecture**
 
-Clean with MVVM 
+Clean MVVM 
   
-  
+
 **Tools and Libraries**
 
 - Kotlin
