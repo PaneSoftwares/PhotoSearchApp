@@ -6,7 +6,6 @@ plugins {
     id("com.google.dagger.hilt.android")
     id("kotlin-parcelize")
 }
-
 android {
     namespace = "com.example.photosearchapp"
     compileSdk = 35
@@ -17,7 +16,7 @@ android {
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
-
+//        buildConfigField("String", "API_KEY", API_KEY)
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -39,8 +38,8 @@ android {
     }
 
     buildFeatures {
-        buildConfig = true
         compose = true
+        buildConfig = true
     }
 
 }
@@ -65,6 +64,12 @@ dependencies {
 
     // Coil
     implementation (libs.coil.compose)
+
+    // Room
+    implementation (libs.androidx.room.ktx)
+    ksp(libs.androidx.room.compiler)
+    ksp(libs.compiler)
+    implementation (libs.androidx.room.paging)
 
     // Dagger - Hilt
     implementation (libs.hilt.android)
