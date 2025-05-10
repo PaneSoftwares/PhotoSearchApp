@@ -38,7 +38,7 @@ class PhotoDetailsViewModel @Inject constructor(
 
             is PhotoDetailsScreenEvents.SetDataAndLoad -> {
                 _photoDetailsScreenState.update {
-                    it.copy( )
+                    it.copy()
                 }
 
                 startLoad(
@@ -55,7 +55,7 @@ class PhotoDetailsViewModel @Inject constructor(
         loadPhotoItem(
             id = id
         ) {
-            loadDetails( )
+            loadDetails()
         }
     }
 

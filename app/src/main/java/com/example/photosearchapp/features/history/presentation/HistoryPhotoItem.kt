@@ -133,7 +133,7 @@ fun HistoryPhotoItem(
                             .background(MaterialTheme.colorScheme.background)
                             .padding(32.dp)
                             .alpha(0.8f),
-                        painter = painterResource(id = R.drawable.ic_no_image),
+                        painter = painterResource(id = R.drawable.ic_err_image),
                         contentDescription = title,
                         tint = MaterialTheme.colorScheme.onBackground
                     )

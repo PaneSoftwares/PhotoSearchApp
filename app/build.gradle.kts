@@ -16,8 +16,10 @@ android {
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
-//        buildConfigField("String", "API_KEY", API_KEY)
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        val key = project.properties["API_KEY"].toString()
+        buildConfigField("String", "API_KEY", key)
     }
 
     buildTypes {
@@ -51,7 +53,6 @@ dependencies {
     implementation(libs.androidx.activity.compose)
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.constraintlayout.compose)
-    // implementation("androidx.constraintlayout:constraintlayout-compose:1.1.1")
 
     // System ui controller
     implementation (libs.accompanist.systemuicontroller)

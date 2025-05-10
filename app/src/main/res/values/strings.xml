@@ -8,4 +8,5 @@
     <string name="error_occurred">Error occurred</string>
     <string name="back">Back</string>
     <string name="no_history_found">No history found</string>
+    <string name="pull_down_refresh">Pull down to refresh</string>
 </resources>

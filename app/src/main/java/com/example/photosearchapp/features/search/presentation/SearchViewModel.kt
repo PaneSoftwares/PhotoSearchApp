@@ -40,7 +40,7 @@ class SearchViewModel @Inject constructor(
             is SearchUiEvents.OnSearchQueryChanged -> {
                 searchJob?.cancel()
                 searchJob = viewModelScope.launch {
-                    delay(1500L)
+                    delay(1000L)
 
                     _searchScreenState.update {
                         it.copy(
@@ -57,7 +57,7 @@ class SearchViewModel @Inject constructor(
             is SearchUiEvents.OnPaginate -> {
                 loadJob?.cancel()
                 loadJob = viewModelScope.launch {
-                    delay(1500L)
+                    delay(1000L)
                     _searchScreenState.update {
                         it.copy(
                             searchPage = searchScreenState.value.searchPage + 1
