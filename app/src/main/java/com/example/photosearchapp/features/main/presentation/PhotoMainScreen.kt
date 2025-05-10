@@ -21,16 +21,13 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
 import androidx.navigation.NavController
 import androidx.navigation.NavHostController
-import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import androidx.navigation.navArgument
 import com.example.photosearchapp.R
 import com.example.photosearchapp.features.history.presentation.HistoryListScreen
 import com.example.photosearchapp.navigation.BottomNavRoute
 import com.example.photosearchapp.ui.theme.font
-import com.example.photosearchapp.util.Constants
 
 data class BottomNavigationItem(
     val title: String,
@@ -91,11 +88,11 @@ fun PhotoMainScreen(
                             when (selectedItem.intValue) {
 
                                 0 -> bottomBarNavController.navigate(
-                                    "${BottomNavRoute.DEFAULT_SCREEN}?type=${Constants.searchPhotoScreen}"
+                                    BottomNavRoute.DEFAULT_SCREEN
                                 )
 
                                 1 -> bottomBarNavController.navigate(
-                                    "${BottomNavRoute.HISTORY_LIST_SCREEN}?type=${Constants.historyScreen}"
+                                    BottomNavRoute.HISTORY_LIST_SCREEN
                                 )
                             }
                         },
@@ -148,17 +145,11 @@ fun BottomNavigationScreens(
             DefaultScreen(
                 navController = navController,
                 bottomBarNavController = bottomBarNavController,
-                navBackStackEntry = null,
             )
         }
 
         composable(
-            "${BottomNavRoute.HISTORY_LIST_SCREEN}?type={type}",
-            arguments = listOf(
-                navArgument("type") {
-                    type = NavType.StringType
-                }
-            )
+            BottomNavRoute.HISTORY_LIST_SCREEN
         ) {
             HistoryListScreen(
                 selectedItem = selectedItem,
