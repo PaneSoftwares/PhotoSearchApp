@@ -159,10 +159,11 @@ fun PosterSection(
             Image(
                 bitmap = imageBitmap.asImageBitmap(),
                 contentDescription = photo.alt,
-                contentScale = ContentScale.Inside,
+                contentScale = ContentScale.Crop,
                 alignment = Alignment.Center,
                 modifier = Modifier
                     .fillMaxSize()
+                    .padding(horizontal = 10.dp)
                     .clip(RoundedCornerShape(Radius.dp))
                     .background(MaterialTheme.colorScheme.background),
             )
@@ -177,7 +178,7 @@ fun PosterSection(
                     .background(MaterialTheme.colorScheme.background)
                     .padding(32.dp)
                     .alpha(0.8f),
-                painter = painterResource(id = R.drawable.ic_no_image),
+                painter = painterResource(id = R.drawable.ic_err_image),
                 contentDescription = "title",
                 tint = MaterialTheme.colorScheme.onBackground
             )

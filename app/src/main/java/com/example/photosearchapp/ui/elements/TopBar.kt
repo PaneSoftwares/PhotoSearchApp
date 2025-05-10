@@ -69,7 +69,7 @@ fun FocusedTopBar(
             .height(BigRadius.dp)
             .offset { IntOffset(x = 0, y = toolbarOffsetHeightPx) }
     ) {
-        SearchBar(
+        TopSearchBar(
             leadingIcon = {
                 Icon(
                     Icons.Rounded.Search,

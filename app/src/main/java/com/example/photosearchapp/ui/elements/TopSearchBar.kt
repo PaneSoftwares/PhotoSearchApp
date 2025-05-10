@@ -39,9 +39,8 @@ import androidx.compose.ui.unit.sp
 import com.example.photosearchapp.features.search.presentation.SearchScreenState
 import com.example.photosearchapp.ui.theme.font
 
-
 @Composable
-fun SearchBar(
+fun TopSearchBar(
     modifier: Modifier = Modifier,
     leadingIcon: (@Composable () -> Unit)? = null,
     placeholderText: String = "...",

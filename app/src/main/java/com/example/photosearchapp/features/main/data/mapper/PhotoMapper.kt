@@ -25,7 +25,7 @@ fun PhotoEntity.toPhoto(
 }
 
 fun PhotoDto.toPhotoEntity(
-    
+
 ): PhotoEntity {
     return PhotoEntity(
         id = id ?: 0,
