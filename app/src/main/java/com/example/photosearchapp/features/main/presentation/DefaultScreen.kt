@@ -14,21 +14,21 @@ import androidx.compose.ui.input.nestedscroll.NestedScrollConnection
 import androidx.compose.ui.input.nestedscroll.NestedScrollSource
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavController
 import androidx.navigation.NavHostController
+import com.example.photosearchapp.R
 import com.example.photosearchapp.navigation.BottomNavRoute
 import com.example.photosearchapp.ui.elements.NonFocusedTopBar
+import com.example.photosearchapp.ui.elements.PullToReloadView
 import com.example.photosearchapp.ui.theme.BigRadius
-import com.example.photosearchapp.util.Constants.searchPhotoScreen
 import kotlin.math.roundToInt
 
 @Composable
 fun DefaultScreen(
     navController: NavController,
     bottomBarNavController: NavHostController,
-    navBackStackEntry: NavBackStackEntry?,
 ) {
 
     val toolbarHeightPx = with(LocalDensity.current) { BigRadius.dp.roundToPx().toFloat() }
@@ -50,20 +50,17 @@ fun DefaultScreen(
         bottomBarNavController.navigate(BottomNavRoute.HOME_SCREEN)
     }
 
-    var type = remember {
-        navBackStackEntry?.arguments?.getString("type")
-    }
-
-    if (type == null) {
-        type = searchPhotoScreen
-    }
-
     Box(
         modifier = Modifier
             .fillMaxSize()
             .background(MaterialTheme.colorScheme.surface)
             .nestedScroll(nestedScrollConnection)
     ) {
+        PullToReloadView(
+            0,
+            stringResource(R.string.enter_search_phrase)
+        )
+
         NonFocusedTopBar(
             toolbarOffsetHeightPx = toolbarOffsetHeightPx.floatValue.roundToInt(),
             navController = navController,

@@ -47,6 +47,8 @@ fun PullToReloadView(
                     )
                     .clip(RoundedCornerShape(RadiusContainer.dp))
             ) {
+
+                if(background != 0){
                 Box(
                     modifier = Modifier
                         .height(300.dp)
@@ -54,7 +56,7 @@ fun PullToReloadView(
                         .padding(6.dp)
                         .paint(painterResource(id = background))
                         .clip(RoundedCornerShape(Radius.dp))
-                )
+                )}
 
                 Spacer(modifier = Modifier.height(6.dp))
 
