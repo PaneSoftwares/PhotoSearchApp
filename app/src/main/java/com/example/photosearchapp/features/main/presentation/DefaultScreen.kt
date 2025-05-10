@@ -47,7 +47,7 @@ fun DefaultScreen(
     BackHandler(
         enabled = true
     ) {
-        bottomBarNavController.navigate(BottomNavRoute.HOME_SCREEN)
+        bottomBarNavController.navigate(BottomNavRoute.DEFAULT_SCREEN)
     }
 
     Box(
