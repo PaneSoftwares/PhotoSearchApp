@@ -37,3 +37,10 @@ Clean MVVM
 - Room DB
 - Volley
 - Dagger and Dagger Hilt
+
+**Features to add and things to improve**
+
+- Add a favorites screen
+- Add share capabilities
+- Perharps more info to details screen
+- Full offline support rather than partial
